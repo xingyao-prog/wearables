@@ -6,26 +6,26 @@ const phaseData = {
     design: "Find first-contact friction before it disappears into an overall rating.",
     questionLead: "HRV + EMA at arrival"
   },
-  queue: {
-    number: "02", horizon: "IN-EVENT", title: "Queue", x: 224, y: 151,
+  entry: {
+    number: "02", horizon: "IN-EVENT", title: "Entry", x: 224, y: 151,
     signal: "Baseline-relative HRV + wait and movement",
-    experience: "EMA captures perceived stress, fairness, and control during the wait.",
-    design: "Separate the delay itself from how the wait is communicated and experienced.",
-    questionLead: "HRV + EMA during the queue"
+    experience: "EMA captures clarity, stress, fairness, and control during queueing, security, or check-in.",
+    design: "Separate the delay itself from how entry is organized and communicated.",
+    questionLead: "HRV + EMA during entry"
   },
-  peak: {
-    number: "03", horizon: "IN-EVENT", title: "Peak moment", x: 365, y: 118,
-    signal: "HRV + activity in a matched low-motion window",
+  core: {
+    number: "03", horizon: "IN-EVENT", title: "Core experience", x: 365, y: 118,
+    signal: "HRV + activity during a defined program segment",
     experience: "EMA distinguishes excitement, strain, engagement—or a mixture.",
-    design: "Avoid treating all physiological activation as negative stress.",
-    questionLead: "HRV + EMA near the peak moment"
+    design: "Identify which program or participation touchpoint changes the experience.",
+    questionLead: "HRV + EMA during the core experience"
   },
-  exit: {
-    number: "04", horizon: "IN-EVENT", title: "Exit", x: 485, y: 102,
+  departure: {
+    number: "04", horizon: "IN-EVENT", title: "Departure", x: 485, y: 102,
     signal: "HRV relative to baseline + movement",
     experience: "EMA asks how easy it felt to leave, recover, and make sense of the event.",
     design: "Test whether the final operational moment changes the overall evaluation.",
-    questionLead: "HRV + EMA at exit"
+    questionLead: "HRV + EMA at departure"
   }
 };
 
@@ -46,7 +46,7 @@ const stepData = {
     kicker: "ADD PARTICIPANT VOICE", title: "Explain",
     copy: "Students combine the wearable timeline with EMA, interviews, field observation, or social media data to interpret why a change occurred.",
     learn: "Mixed methods · Data literacy · Experience research",
-    make: "An evidence-based explanation of one consequential friction or peak moment."
+    make: "An evidence-based explanation of one consequential event touchpoint."
   },
   improve: {
     kicker: "CHANGE ONE TOUCHPOINT", title: "Improve",

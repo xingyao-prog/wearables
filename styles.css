@@ -57,6 +57,16 @@ h1 em{font-style:normal;color:#8a908c}
 @keyframes watch-float{50%{transform:translateY(-10px) rotate(2deg)}}
 @keyframes orbit-pulse{50%{transform:scale(1.08);opacity:.55}}
 
+.teaching-snapshot{display:grid;grid-template-columns:145px 1fr;margin-top:20px;border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--white)}
+.snapshot-label{padding:13px 14px;border-right:1px solid var(--line);display:flex;flex-direction:column;justify-content:center}
+.snapshot-label span,.teaching-snapshot dt{font:500 7px/1 DM Mono,monospace;text-transform:uppercase;letter-spacing:.08em}
+.snapshot-label small{margin-top:7px;color:#7569bf;font:500 6px/1.2 DM Mono,monospace}
+.teaching-snapshot dl{margin:0;display:grid;grid-template-columns:repeat(4,1fr)}
+.teaching-snapshot dl>div{min-width:0;padding:12px 13px;border-right:1px solid var(--line)}
+.teaching-snapshot dl>div:last-child{border-right:0}
+.teaching-snapshot dt{color:#929894}
+.teaching-snapshot dd{margin:6px 0 0;color:#525854;font-size:.62rem;line-height:1.35}
+
 .model-section{padding:82px 0;background:var(--fog);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
 .section-head{display:grid;grid-template-columns:135px minmax(0,1fr) 280px;gap:25px;align-items:end;margin-bottom:34px}
 .section-head.compact{margin-bottom:30px}
@@ -168,6 +178,12 @@ footer span{color:#929894}
   .topbar{width:calc(100% - 26px);height:60px}
   .brand span,.topbar nav{display:none}
   .hero{min-height:auto;padding:58px 0}
+  .teaching-snapshot{grid-template-columns:1fr;margin-top:14px}
+  .snapshot-label{border-right:0;border-bottom:1px solid var(--line);flex-direction:row;align-items:center;justify-content:space-between}
+  .snapshot-label small{margin:0}
+  .teaching-snapshot dl{grid-template-columns:1fr 1fr}
+  .teaching-snapshot dl>div:nth-child(2){border-right:0}
+  .teaching-snapshot dl>div:nth-child(-n+2){border-bottom:1px solid var(--line)}
   h1{font-size:2.9rem}
   .watch-stage{margin-top:10px}
   .watch-label{min-width:112px;padding:8px}

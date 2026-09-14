@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=5">
+  <link rel="stylesheet" href="styles.css?v=6">
 </head>
 <body>
   <header class="topbar" id="top">
@@ -22,6 +22,16 @@
   </header>
 
   <main>
+    <section class="teaching-snapshot shell" aria-labelledby="wearable-snapshot-title">
+      <div class="snapshot-label"><span id="wearable-snapshot-title">Teaching snapshot</span><small>Adapted from my research</small></div>
+      <dl>
+        <div><dt>Course fit</dt><dd>Event Experience · Assessment &amp; Evaluation · Experience Analytics · Event Technology</dd></div>
+        <div><dt>Format + time</dt><dd>10-min demo · 50-min lab · field project</dd></div>
+        <div><dt>What students submit</dt><dd>Experience Measurement Report</dd></div>
+        <div><dt>Assessment</dt><dd>Measure design · data quality · interpretation · application</dd></div>
+      </dl>
+    </section>
+
     <section class="hero shell">
       <div class="hero-copy">
         <p class="eyebrow"><i></i>EVENT EXPERIENCE RESEARCH</p>
@@ -56,9 +66,9 @@
               <small>CHOOSE A MOMENT</small>
               <div class="phase-controls" role="tablist" aria-label="Event moments">
                 <button class="active" role="tab" aria-selected="true" data-phase="arrival">Arrival</button>
-                <button role="tab" aria-selected="false" data-phase="queue">Queue</button>
-                <button role="tab" aria-selected="false" data-phase="peak">Peak</button>
-                <button role="tab" aria-selected="false" data-phase="exit">Exit</button>
+                <button role="tab" aria-selected="false" data-phase="entry">Entry</button>
+                <button role="tab" aria-selected="false" data-phase="core">Core Experience</button>
+                <button role="tab" aria-selected="false" data-phase="departure">Departure</button>
               </div>
             </div>
             <div>
@@ -98,7 +108,7 @@
                 </g>
               </svg>
               <div class="journey-labels" aria-hidden="true">
-                <span>Arrival</span><span>Queue</span><span>Peak</span><span>Exit</span>
+                <span>Arrival</span><span>Entry</span><span>Core experience</span><span>Departure</span>
               </div>
             </div>
 
@@ -178,6 +188,6 @@
   </main>
 
   <footer><div class="shell"><b>WEARABLES × EXPERIENCE MEASUREMENT</b><span>Measure the moment. Explain the experience. Improve the design.</span></div></footer>
-  <script src="script.js?v=5"></script>
+  <script src="script.js?v=6"></script>
 </body>
 </html>
