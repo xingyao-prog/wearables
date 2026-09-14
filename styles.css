@@ -11,8 +11,8 @@
 }
 
 *{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{margin:0;background:var(--paper);color:var(--ink);font:500 14px/1.5 Manrope,Arial,sans-serif}
+html{scroll-behavior:smooth;background:#fff}
+body{margin:0;background:#fff;color:var(--ink);font:500 14px/1.5 Manrope,Arial,sans-serif}
 button,a{font:inherit;color:inherit}
 button{cursor:pointer}
 .shell{width:min(1120px,calc(100% - 40px));margin:auto}
