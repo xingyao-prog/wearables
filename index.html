@@ -10,6 +10,69 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css?v=8">
+
+  <style>
+    .learning-snapshot {
+      display: grid;
+      grid-template-columns: minmax(220px, 0.9fr) minmax(0, 3.1fr);
+      border-top: 1px solid rgba(28, 32, 29, 0.24);
+      border-bottom: 1px solid rgba(28, 32, 29, 0.24);
+      margin-top: 28px;
+    }
+    .learning-snapshot .format-block,
+    .learning-snapshot .learning-block {
+      min-width: 0;
+    }
+    .learning-snapshot .format-block {
+      padding: 22px 24px 26px;
+      border-right: 1px solid rgba(28, 32, 29, 0.24);
+    }
+    .learning-snapshot .learning-block {
+      padding: 22px 24px 26px;
+    }
+    .learning-snapshot .snapshot-heading {
+      margin: 0 0 18px;
+      font-family: "DM Mono", monospace;
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.13em;
+      text-transform: uppercase;
+      color: rgba(28, 32, 29, 0.58);
+    }
+    .learning-snapshot .format-copy {
+      margin: 0;
+      font-family: "Manrope", sans-serif;
+      font-size: clamp(18px, 1.3vw, 24px);
+      line-height: 1.45;
+      color: #1c201d;
+    }
+    .learning-points-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 28px;
+    }
+    .learning-point {
+      margin: 0;
+      font-family: "Manrope", sans-serif;
+      font-size: clamp(18px, 1.45vw, 25px);
+      line-height: 1.28;
+      font-weight: 700;
+      color: #1c201d;
+    }
+    @media (max-width: 900px) {
+      .learning-snapshot {
+        grid-template-columns: 1fr;
+      }
+      .learning-snapshot .format-block {
+        border-right: 0;
+        border-bottom: 1px solid rgba(28, 32, 29, 0.24);
+      }
+      .learning-points-grid {
+        grid-template-columns: 1fr;
+        gap: 14px;
+      }
+    }
+  </style>
 </head>
 <body>
   <header class="topbar" id="top">
@@ -17,15 +80,23 @@
   </header>
 
   <main>
-    <section class="teaching-snapshot shell" aria-labelledby="wearable-snapshot-title">
-      <div class="snapshot-label"><span id="wearable-snapshot-title">Teaching snapshot</span><small>Adapted from my research</small></div>
-      <dl>
-        <div><dt>Course fit</dt><dd>Event Experience · Assessment &amp; Evaluation · Experience Analytics · Event Technology</dd></div>
-        <div><dt>Format + time</dt><dd>10-min demo · 50-min lab · field project</dd></div>
-        <div><dt>What students submit</dt><dd>Experience Measurement Report</dd></div>
-        <div><dt>Assessment</dt><dd>Measure design · data quality · interpretation · application</dd></div>
-      </dl>
+
+    <section class="learning-snapshot shell" aria-label="Teaching format and learning points">
+      <div class="format-block">
+        <p class="snapshot-heading">Format</p>
+        <p class="format-copy">10-min demo · 50-min lab · field project</p>
+      </div>
+
+      <div class="learning-block">
+        <p class="snapshot-heading">What students learn</p>
+        <div class="learning-points-grid">
+          <p class="learning-point">Temporal Experience Analysis</p>
+          <p class="learning-point">Wearable &amp; Mobile Experience Sensing</p>
+          <p class="learning-point">Evidence-Based Experience Redesign</p>
+        </div>
+      </div>
     </section>
+
 
     <section class="hero shell">
       <div class="hero-copy">
@@ -120,30 +191,6 @@
           </div>
         </div>
       </div>
-    </section>
-
-    <section class="teaching-section shell" id="teaching">
-      <div class="section-head compact">
-        <p>02 · LEARN BY DOING</p>
-        <h2>Students measure an experience—not just describe it.</h2>
-      </div>
-
-      <div class="teaching-lab">
-        <div class="step-controls" role="tablist" aria-label="Student project steps">
-          <button class="active" role="tab" aria-selected="true" data-step="measure"><span>01</span><b>Measure</b></button>
-          <button role="tab" aria-selected="false" data-step="explain"><span>02</span><b>Explain</b></button>
-          <button role="tab" aria-selected="false" data-step="improve"><span>03</span><b>Improve</b></button>
-        </div>
-        <article class="step-detail" aria-live="polite">
-          <div><small id="stepKicker">COMPARE TWO MOMENTS</small><h3 id="stepTitle">Measure</h3></div>
-          <p id="stepCopy">Students compare two event moments or designs using baseline-relative HRV, movement, and short EMA prompts.</p>
-          <dl>
-            <div><dt>LEARN</dt><dd id="stepLearn">Experience journey · Event design · Field measurement</dd></div>
-            <div><dt>MAKE</dt><dd id="stepMake">A time-aligned experience map with one testable touchpoint hypothesis.</dd></div>
-          </dl>
-        </article>
-      </div>
-      <p class="contexts">EVENT <i>×</i> SPORT <i>×</i> OUTDOOR <i>×</i> ADVENTURE <i>×</i> TRAVEL <i>×</i> HOSPITALITY</p>
     </section>
 
     <section class="notes-section" id="notes">
