@@ -9,31 +9,32 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=8">
+  <link rel="stylesheet" href="styles.css?v=9">
 
   <style>
     .learning-snapshot {
       display: grid;
-      grid-template-columns: minmax(220px, 0.9fr) minmax(0, 3.1fr);
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      width: min(760px, calc(100% - 52px));
       border-top: 1px solid rgba(28, 32, 29, 0.24);
       border-bottom: 1px solid rgba(28, 32, 29, 0.24);
-      margin-top: 28px;
+      margin-top: 14px;
     }
     .learning-snapshot .format-block,
     .learning-snapshot .learning-block {
       min-width: 0;
     }
     .learning-snapshot .format-block {
-      padding: 22px 24px 26px;
+      padding: 18px 24px;
       border-right: 1px solid rgba(28, 32, 29, 0.24);
     }
     .learning-snapshot .learning-block {
-      padding: 22px 24px 26px;
+      padding: 18px 24px;
     }
     .learning-snapshot .snapshot-heading {
-      margin: 0 0 18px;
+      margin: 0 0 8px;
       font-family: "DM Mono", monospace;
-      font-size: 11px;
+      font-size: 7px;
       font-weight: 500;
       letter-spacing: 0.13em;
       text-transform: uppercase;
@@ -42,21 +43,21 @@
     .learning-snapshot .format-copy {
       margin: 0;
       font-family: "Manrope", sans-serif;
-      font-size: clamp(18px, 1.3vw, 24px);
-      line-height: 1.45;
+      font-size: .62rem;
+      line-height: 1.35;
       color: #1c201d;
     }
     .learning-points-grid {
       display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 28px;
+      grid-template-columns: 1fr;
+      gap: 2px;
     }
     .learning-point {
       margin: 0;
       font-family: "Manrope", sans-serif;
-      font-size: clamp(18px, 1.45vw, 25px);
-      line-height: 1.28;
-      font-weight: 700;
+      font-size: .62rem;
+      line-height: 1.35;
+      font-weight: 500;
       color: #1c201d;
     }
     @media (max-width: 900px) {
@@ -69,7 +70,7 @@
       }
       .learning-points-grid {
         grid-template-columns: 1fr;
-        gap: 14px;
+        gap: 2px;
       }
     }
   </style>

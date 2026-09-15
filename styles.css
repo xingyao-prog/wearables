@@ -222,3 +222,95 @@ footer span{color:#929894}
   .hrv-line,.is-updating{animation:none!important}
   .outcome-pulse{animation:none!important}
 }
+
+/* IncluMap-aligned type scale and spacing. */
+body{font-size:13px;line-height:1.42}
+.shell{width:min(1040px,calc(100% - 52px))}
+.topbar{width:min(1040px,calc(100% - 52px));height:54px}
+.topbar nav{gap:20px}
+.topbar nav a{font-size:8px}
+
+.teaching-snapshot{grid-template-columns:130px 1fr;margin-top:14px}
+.snapshot-label{padding:11px 12px}
+.teaching-snapshot dl>div{padding:11px 12px}
+.teaching-snapshot dd{font-size:.59rem}
+
+.hero{min-height:480px;grid-template-columns:1.05fr .95fr;gap:48px;padding:46px 0 52px}
+.eyebrow,.section-head>p,.note-label{font-size:8px;letter-spacing:.08em}
+.eyebrow i{width:8px;height:8px;margin-right:8px}
+h1{font-size:clamp(2.35rem,4.15vw,3.7rem);line-height:1;letter-spacing:-.06em}
+.lead{max-width:570px;margin:21px 0 12px;font-size:clamp(.82rem,1.08vw,.98rem)}
+.principle{max-width:560px;font-size:.68rem}
+.primary-link{margin-top:22px;font-size:8px}
+.watch-stage{width:100%;max-width:460px;justify-self:end}
+.watch-label{min-width:120px;padding:8px 9px;box-shadow:3px 3px 0 rgba(25,28,27,.13)}
+.watch-label b{font-size:.7rem}
+.watch-label span{font-size:.54rem}
+.visual-caption{padding:9px 10px;font-size:.59rem}
+
+.model-section{padding:58px 0;background:#f7f8f5}
+.section-head{grid-template-columns:105px minmax(0,1fr) 240px;gap:20px;margin-bottom:24px}
+.model-section .section-head{display:block;max-width:620px}
+.section-head.compact{margin-bottom:23px}
+.section-head h2{font-size:clamp(1.75rem,2.8vw,2.55rem);line-height:1.04;letter-spacing:-.045em}
+.section-head>span{font-size:.69rem}
+.control-row{gap:22px;padding:15px 17px}
+.control-row small{margin-bottom:8px;font-size:7px}
+.phase-controls button,.outcome-controls button{padding:7px 10px;font-size:.63rem}
+.outcome-feedback{margin-top:9px;font-size:7px}
+.timeline-panel{padding:16px 17px 10px}
+.panel-label{font-size:7px}
+.axis-copy text{font-size:8px}
+.insight-panel{padding:18px}
+.insight-head{padding-right:42px}
+.insight-head>span{width:34px;height:34px;font-size:9px}
+.insight-head small{font-size:7px}
+.insight-head h3{font-size:1.45rem}
+.insight-panel dl{margin-top:15px}
+.insight-panel dl div{padding:9px 0}
+.insight-panel dd{font-size:.64rem}
+.research-question{grid-template-columns:100px minmax(0,1.4fr) minmax(200px,.7fr);gap:18px;padding:15px 17px}
+.research-question small{font-size:7px}
+.research-question p{font-size:.86rem}
+.research-question span{font-size:.62rem}
+
+.teaching-section{padding:60px 0}
+.teaching-lab{grid-template-columns:210px 1fr}
+.step-controls button{grid-template-columns:35px 1fr;gap:9px;min-height:62px;padding:12px 14px}
+.step-controls button span{font-size:7px}
+.step-controls button b{font-size:.82rem}
+.step-detail{grid-template-columns:.65fr 1.25fr;gap:18px;padding:24px}
+.step-detail small{font-size:7px}
+.step-detail h3{margin-top:6px;font-size:1.75rem}
+.step-detail>p{font-size:.79rem;line-height:1.5}
+.step-detail dl div{padding-top:12px}
+.step-detail dd{font-size:.66rem}
+.contexts{margin-top:18px;font-size:7px}
+
+.notes-section{padding:26px 0 46px;background:#f2f3f0}
+.notes-section summary{padding:16px 0;font-size:8px}
+.notes-grid{gap:45px;padding-bottom:28px;font-size:.65rem}
+footer .shell{min-height:56px;font-size:7px}
+
+@media(max-width:900px){
+  .watch-stage{justify-self:start}
+  .section-head{grid-template-columns:85px 1fr}
+  .teaching-lab{grid-template-columns:180px 1fr}
+}
+
+@media(max-width:600px){
+  .shell,.topbar{width:calc(100% - 26px)}
+  .topbar{height:54px}
+  .hero{padding:44px 0;gap:28px}
+  h1{font-size:2.55rem}
+  .teaching-snapshot{grid-template-columns:1fr}
+  .teaching-snapshot dl{grid-template-columns:1fr 1fr}
+  .model-section,.teaching-section{padding:50px 0}
+  .section-head{grid-template-columns:1fr;margin-bottom:22px}
+  .section-head h2{font-size:2rem}
+  .control-row{padding:14px}
+  .research-question{grid-template-columns:1fr;padding:15px}
+  .teaching-lab{grid-template-columns:1fr}
+  .step-detail{grid-template-columns:1fr;padding:20px}
+  .step-detail h3{font-size:1.65rem}
+}

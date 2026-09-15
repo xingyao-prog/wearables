@@ -66,7 +66,8 @@ let selectedPhase = "arrival";
 let selectedOutcome = "satisfaction";
 
 function updateResearchQuestion() {
-  document.getElementById("researchQuestion").textContent =
+  const question = document.getElementById("researchQuestion");
+  if (question) question.textContent =
     `Is ${phaseData[selectedPhase].questionLead} associated with ${outcomeData[selectedOutcome].phrase}?`;
 }
 
@@ -131,6 +132,7 @@ function selectOutcome(key) {
 }
 
 function selectStep(key) {
+  if (!document.getElementById("stepTitle")) return;
   const data = stepData[key];
   document.querySelectorAll(".step-controls button").forEach((button) => {
     const active = button.dataset.step === key;
