@@ -57,9 +57,8 @@ const stepData = {
 };
 
 const visualData = {
-  hrv: "Locate a physiological change during the event.",
-  ema: "Ask what happened and how it felt at that moment.",
-  outcome: "Connect the paired evidence to satisfaction or future behavior."
+  hrv: "Locate a moment of heightened stress, emotional arousal, or recovery during the event.",
+  ema: "Capture reported stress and emotion at that same moment."
 };
 
 let selectedPhase = "arrival";
