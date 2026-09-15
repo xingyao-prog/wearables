@@ -143,7 +143,7 @@
               <div class="panel-label"><span>PAIRED HRV + EMA TIMELINE</span><small>Illustrative</small></div>
               <svg viewBox="0 0 760 250" role="img" aria-labelledby="signalTitle signalDesc">
                 <title id="signalTitle">Illustrative paired HRV and EMA event timeline</title>
-                <desc id="signalDesc">An HRV line and time-matched EMA points run through four event moments and connect to an experience outcome.</desc>
+                <desc id="signalDesc">An HRV line and time-matched EMA points run through four event moments.</desc>
                 <path class="grid" d="M56 67H704M56 125H704M56 183H704"/>
                 <path class="baseline" d="M56 98H492"/>
                 <path class="hrv-line" d="M56 96C108 87 137 104 178 100S238 156 291 151S350 111 393 118S452 107 492 101"/>
@@ -151,16 +151,13 @@
                   <circle cx="82" cy="178" r="6"/><circle cx="224" cy="178" r="6"/><circle cx="365" cy="178" r="6"/><circle cx="485" cy="178" r="6"/>
                 </g>
                 <circle class="ema-focus" id="emaFocus" cx="82" cy="178" r="13"/>
-                <path class="outcome-link" d="M510 126H628"/>
-                <rect class="outcome-window" x="640" y="54" width="64" height="144"/>
-                <text class="outcome-svg-label" id="outcomeSvgLabel" x="672" y="128">SAT</text>
+                <text id="outcomeSvgLabel" style="display:none"></text>
                 <line class="cursor" id="phaseCursor" x1="82" y1="35" x2="82" y2="205"/>
                 <circle class="cursor-dot" id="phaseDot" cx="82" cy="96" r="7"/>
                 <g class="axis-copy">
                   <text x="56" y="228">EVENT →</text>
                   <text x="58" y="61">HRV</text>
                   <text x="58" y="170">EMA</text>
-                  <text x="650" y="78">NEXT</text>
                 </g>
               </svg>
               <div class="journey-labels" aria-hidden="true">
