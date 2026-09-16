@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=10">
+  <link rel="stylesheet" href="styles.css?v=11">
 
   <style>
     .learning-snapshot {
@@ -135,40 +135,27 @@
                 <button role="tab" aria-selected="false" data-phase="departure">Departure</button>
               </div>
             </div>
-            <div>
-              <small>CONNECT IT TO</small>
-              <div class="outcome-controls" role="tablist" aria-label="Experience outcomes">
-                <button class="active" role="tab" aria-selected="true" data-outcome="satisfaction">Satisfaction</button>
-                <button role="tab" aria-selected="false" data-outcome="return">Return</button>
-                <button role="tab" aria-selected="false" data-outcome="repurchase">Repurchase</button>
-              </div>
-              <p class="outcome-feedback"><i></i><span id="outcomeFeedback">Testing post-event satisfaction</span></p>
-            </div>
           </div>
 
           <div class="model-canvas">
             <div class="timeline-panel">
-              <div class="panel-label"><span>PAIRED HRV + EMA TIMELINE</span><small>Illustrative</small></div>
-              <svg viewBox="0 0 760 250" role="img" aria-labelledby="signalTitle signalDesc">
-                <title id="signalTitle">Illustrative paired HRV and EMA event timeline</title>
-                <desc id="signalDesc">An HRV line and time-matched EMA points run through four event moments and connect to an experience outcome.</desc>
-                <path class="grid" d="M56 67H704M56 125H704M56 183H704"/>
+              <div class="panel-label"><span>PAIRED HRV + EMA TIMELINE</span></div>
+              <svg viewBox="0 0 540 250" role="img" aria-labelledby="signalTitle signalDesc">
+                <title id="signalTitle">Paired HRV and EMA event timeline</title>
+                <desc id="signalDesc">An HRV line and time-matched EMA points run through four event moments.</desc>
+                <path class="grid" d="M56 67H520M56 125H520M56 183H520"/>
                 <path class="baseline" d="M56 98H492"/>
                 <path class="hrv-line" d="M56 96C108 87 137 104 178 100S238 156 291 151S350 111 393 118S452 107 492 101"/>
                 <g class="ema-points" aria-hidden="true">
                   <circle cx="82" cy="178" r="6"/><circle cx="224" cy="178" r="6"/><circle cx="365" cy="178" r="6"/><circle cx="485" cy="178" r="6"/>
                 </g>
                 <circle class="ema-focus" id="emaFocus" cx="82" cy="178" r="13"/>
-                <path class="outcome-link" d="M510 126H628"/>
-                <rect class="outcome-window" x="640" y="54" width="64" height="144"/>
-                <text class="outcome-svg-label" id="outcomeSvgLabel" x="672" y="128">SAT</text>
                 <line class="cursor" id="phaseCursor" x1="82" y1="35" x2="82" y2="205"/>
                 <circle class="cursor-dot" id="phaseDot" cx="82" cy="96" r="7"/>
                 <g class="axis-copy">
                   <text x="56" y="228">EVENT →</text>
                   <text x="58" y="61">HRV</text>
                   <text x="58" y="170">EMA</text>
-                  <text x="650" y="78">NEXT</text>
                 </g>
               </svg>
               <div class="journey-labels" aria-hidden="true">
@@ -222,6 +209,6 @@
   </main>
 
   <footer><div class="shell"><b>WEARABLES × EXPERIENCE MEASUREMENT</b><span>Measure the moment. Explain the experience. Improve the design.</span></div></footer>
-  <script src="script.js?v=6"></script>
+  <script src="script.js?v=7"></script>
 </body>
 </html>

@@ -3,36 +3,26 @@ const phaseData = {
     number: "01", horizon: "IN-EVENT", title: "Arrival", x: 82, y: 96,
     signal: "HRV relative to baseline + movement",
     experience: "A brief EMA asks how welcomed or uncertain the arrival feels.",
-    design: "Find first-contact friction before it disappears into an overall rating.",
-    questionLead: "HRV + EMA at arrival"
+    design: "Find first-contact friction before it disappears into an overall rating."
   },
   entry: {
     number: "02", horizon: "IN-EVENT", title: "Entry", x: 224, y: 151,
     signal: "Baseline-relative HRV + wait and movement",
     experience: "EMA captures clarity, stress, fairness, and control during queueing, security, or check-in.",
-    design: "Separate the delay itself from how entry is organized and communicated.",
-    questionLead: "HRV + EMA during entry"
+    design: "Separate the delay itself from how entry is organized and communicated."
   },
   core: {
     number: "03", horizon: "IN-EVENT", title: "Core experience", x: 365, y: 118,
     signal: "HRV + activity during a defined program segment",
     experience: "EMA distinguishes excitement, strain, engagement—or a mixture.",
-    design: "Identify which program or participation touchpoint changes the experience.",
-    questionLead: "HRV + EMA during the core experience"
+    design: "Identify which program or participation touchpoint changes the experience."
   },
   departure: {
     number: "04", horizon: "IN-EVENT", title: "Departure", x: 485, y: 102,
     signal: "HRV relative to baseline + movement",
     experience: "EMA asks how easy it felt to leave, recover, and make sense of the event.",
-    design: "Test whether the final operational moment changes the overall evaluation.",
-    questionLead: "HRV + EMA at departure"
+    design: "Test whether the final operational moment changes the overall evaluation."
   }
-};
-
-const outcomeData = {
-  satisfaction: {phrase: "post-event satisfaction", label: "SAT", feedback: "Testing post-event satisfaction"},
-  return: {phrase: "intention to return", label: "RETURN", feedback: "Testing intention to return"},
-  repurchase: {phrase: "repurchase intention", label: "BUY", feedback: "Testing repurchase intention"}
 };
 
 const stepData = {
@@ -61,15 +51,6 @@ const visualData = {
   ema: "Capture reported stress and emotion at that same moment."
 };
 
-let selectedPhase = "arrival";
-let selectedOutcome = "satisfaction";
-
-function updateResearchQuestion() {
-  const question = document.getElementById("researchQuestion");
-  if (question) question.textContent =
-    `Is ${phaseData[selectedPhase].questionLead} associated with ${outcomeData[selectedOutcome].phrase}?`;
-}
-
 function flash(element) {
   element.classList.remove("is-updating");
   requestAnimationFrame(() => element.classList.add("is-updating"));
@@ -89,7 +70,6 @@ function selectVisual(key) {
 }
 
 function selectPhase(key) {
-  selectedPhase = key;
   const data = phaseData[key];
   document.querySelectorAll(".phase-controls button").forEach((button) => {
     const active = button.dataset.phase === key;
@@ -107,27 +87,7 @@ function selectPhase(key) {
   document.getElementById("phaseSignal").textContent = data.signal;
   document.getElementById("phaseExperience").textContent = data.experience;
   document.getElementById("phaseDesign").textContent = data.design;
-  updateResearchQuestion();
   flash(document.querySelector(".insight-panel"));
-  flash(document.querySelector(".research-question"));
-}
-
-function selectOutcome(key) {
-  selectedOutcome = key;
-  const data = outcomeData[key];
-  document.querySelectorAll(".outcome-controls button").forEach((button) => {
-    const active = button.dataset.outcome === key;
-    button.classList.toggle("active", active);
-    button.setAttribute("aria-selected", String(active));
-  });
-  document.getElementById("outcomeFeedback").textContent = data.feedback;
-  document.getElementById("outcomeSvgLabel").textContent = data.label;
-  flash(document.querySelector(".outcome-feedback"));
-  const outcomeWindow = document.querySelector(".outcome-window");
-  outcomeWindow.classList.remove("outcome-pulse");
-  requestAnimationFrame(() => outcomeWindow.classList.add("outcome-pulse"));
-  updateResearchQuestion();
-  flash(document.querySelector(".research-question"));
 }
 
 function selectStep(key) {
@@ -153,14 +113,10 @@ document.querySelectorAll(".visual-step").forEach((button) =>
 document.querySelectorAll(".phase-controls button").forEach((button) =>
   button.addEventListener("click", () => selectPhase(button.dataset.phase))
 );
-document.querySelectorAll(".outcome-controls button").forEach((button) =>
-  button.addEventListener("click", () => selectOutcome(button.dataset.outcome))
-);
 document.querySelectorAll(".step-controls button").forEach((button) =>
   button.addEventListener("click", () => selectStep(button.dataset.step))
 );
 
 selectVisual("hrv");
 selectPhase("arrival");
-selectOutcome("satisfaction");
 selectStep("measure");
