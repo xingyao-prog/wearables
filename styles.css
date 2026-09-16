@@ -37,7 +37,8 @@ h1 em{font-style:normal;color:#8a908c}
 .primary-link span{font-size:17px}
 
 .watch-stage{position:relative;aspect-ratio:1;min-width:0;background:linear-gradient(145deg,#f2f0fa 0 52%,#dfe2de 53%);border:1px solid #abb1ac;overflow:hidden}
-.watch-stage>img{position:absolute;z-index:3;width:42%;left:29%;top:18%;filter:drop-shadow(0 24px 26px rgba(30,35,32,.22));animation:watch-float 5s ease-in-out infinite}
+.watch-stage>.watch-device{position:absolute;z-index:3;width:42%;left:29%;top:18%;filter:drop-shadow(0 24px 26px rgba(30,35,32,.22));animation:watch-float 5s ease-in-out infinite}
+.watch-stage>.phone-device{position:absolute;z-index:2;width:29%;left:58%;top:17%;transform:rotate(6deg);filter:drop-shadow(0 18px 22px rgba(30,35,32,.2))}
 .orbit{position:absolute;border:1px solid rgba(45,49,46,.28);border-radius:50%}
 .orbit-one{width:76%;height:76%;left:12%;top:12%}
 .orbit-two{width:50%;height:50%;left:25%;top:25%;border-color:var(--purple);animation:orbit-pulse 4s ease-in-out infinite}
@@ -49,8 +50,6 @@ h1 em{font-style:normal;color:#8a908c}
 .watch-label.now{left:4%;top:12%;border-left:5px solid var(--purple)}
 .watch-label.later{right:4%;top:47%;border-left:5px solid var(--purple-soft)}
 .watch-label.outcome{left:9%;bottom:6%;border-left:5px solid var(--yellow)}
-.ema-phone{position:absolute;right:10px;top:50%;width:16px;height:16px;transform:translateY(-50%);opacity:.62}
-.watch-label.later{padding-right:36px}
 .watch-label:hover{transform:translateY(-3px)}
 .watch-label.active{transform:translateY(-3px);box-shadow:6px 6px 0 var(--yellow)}
 .visual-caption{position:absolute;z-index:4;right:4%;bottom:5%;width:43%;margin:0;padding:11px 13px;background:var(--ink);color:#fff;font-size:.68rem}

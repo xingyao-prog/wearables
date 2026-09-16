@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=11">
+  <link rel="stylesheet" href="styles.css?v=12">
 
   <style>
     .learning-snapshot {
@@ -111,9 +111,10 @@
       <div class="watch-stage" data-mode="hrv" aria-label="Wearable and EMA measurement sequence">
         <div class="orbit orbit-one"></div>
         <div class="orbit orbit-two"></div>
-        <img src="wearable-watch.png" alt="Generic wearable watch">
+        <img class="phone-device" src="ema-smartphone.png" alt="" aria-hidden="true">
+        <img class="watch-device" src="wearable-watch.png" alt="Generic wearable watch">
         <button class="watch-label visual-step now active" type="button" data-visual="hrv" aria-pressed="true"><small>BODY</small><b>HRV</b></button>
-        <button class="watch-label visual-step later" type="button" data-visual="ema" aria-pressed="false"><small>VOICE</small><b>EMA</b><img class="ema-phone" src="phone.svg" alt="" aria-hidden="true"></button>
+        <button class="watch-label visual-step later" type="button" data-visual="ema" aria-pressed="false"><small>VOICE</small><b>EMA</b></button>
         <p class="visual-caption" id="visualCaption">Locate a moment of heightened stress, emotional arousal, or recovery during the event.</p>
       </div>
     </section>
