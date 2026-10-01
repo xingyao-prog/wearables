@@ -16,14 +16,9 @@ body{margin:0;background:#fff;color:var(--ink);font:500 14px/1.5 Manrope,Arial,s
 button,a{font:inherit;color:inherit}
 button{cursor:pointer}
 .shell{width:min(1120px,calc(100% - 40px));margin:auto}
-.topbar{width:min(1240px,calc(100% - 40px));height:68px;margin:auto;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line)}
+.topbar{width:min(1240px,calc(100% - 40px));height:68px;margin:auto;display:flex;align-items:center}
 .selected-work{color:inherit;text-decoration:none;white-space:nowrap;font:500 9px/1 DM Mono,monospace;text-transform:uppercase;letter-spacing:.08em}
 .selected-work:hover,.selected-work:focus-visible{text-decoration:underline;text-underline-offset:4px;outline:0}
-.brand{font:500 10px/1 DM Mono,monospace;letter-spacing:.07em;text-decoration:none}
-.brand span{color:#8a908c}
-.topbar nav{display:flex;gap:24px}
-.topbar nav a{color:#767d78;text-decoration:none;font:400 9px/1 DM Mono,monospace;text-transform:uppercase;letter-spacing:.08em}
-.topbar nav a:hover{color:var(--ink)}
 
 .hero{min-height:590px;display:grid;grid-template-columns:1.04fr .96fr;gap:75px;align-items:center;padding:72px 0}
 .eyebrow,.section-head>p,.note-label{font:500 9px/1.3 DM Mono,monospace;letter-spacing:.1em;text-transform:uppercase}
@@ -172,7 +167,6 @@ footer span{color:#929894}
 @media(max-width:600px){
   .shell{width:calc(100% - 26px)}
   .topbar{width:calc(100% - 26px);height:60px}
-  .brand span,.topbar nav{display:none}
   .hero{min-height:auto;padding:58px 0}
   .teaching-snapshot{grid-template-columns:1fr;margin-top:14px}
   .snapshot-label{border-right:0;border-bottom:1px solid var(--line);flex-direction:row;align-items:center;justify-content:space-between}
@@ -222,8 +216,6 @@ footer span{color:#929894}
 body{font-size:13px;line-height:1.42}
 .shell{width:min(1040px,calc(100% - 52px))}
 .topbar{width:min(1040px,calc(100% - 52px));height:54px}
-.topbar nav{gap:20px}
-.topbar nav a{font-size:8px}
 
 .teaching-snapshot{grid-template-columns:130px 1fr;margin-top:14px}
 .snapshot-label{padding:11px 12px}
